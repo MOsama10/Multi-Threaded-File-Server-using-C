@@ -57,5 +57,6 @@ Utilizes synchronization mechanisms such as mutexes, semaphores, or locks to pre
 The implementation of a multi-threaded file server offers significant efficiency and scalability benefits over traditional single-threaded architectures. By incorporating recommended features, synchronization mechanisms, and essential file handling functions, this repository provides a robust solution capable of meeting the demands of modern applications.
 
 **GUI: using Tikenter**
+
 ![WhatsApp Image 2024-05-17 at 3 32 53 PM(2)](https://github.com/MOsama10/Multi-Threaded-File-Server-using-C/assets/124840434/63134c47-5c7c-4504-997d-e30aa122d49b)
 
