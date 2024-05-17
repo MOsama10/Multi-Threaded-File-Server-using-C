@@ -58,4 +58,4 @@ The implementation of a multi-threaded file server offers significant efficiency
 
 **GUI: using Tikenter**
 ![WhatsApp Image 2024-05-17 at 3 32 53 PM(2)](https://github.com/MOsama10/Multi-Threaded-File-Server-using-C/assets/124840434/63134c47-5c7c-4504-997d-e30aa122d49b)
-![WhatsApp Image 2024-05-17 at 3 32 53 PM(1)](https://github.com/MOsama10/Multi-Threaded-File-Server-using-C/assets/124840434/800af753-8632-4fe4-8474-b3e3bd46bc61)
+
