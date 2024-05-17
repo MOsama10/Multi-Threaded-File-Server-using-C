@@ -6,7 +6,7 @@ import tkinter as tk
 
 def upload():
 
-    filename = filename_entry.get()
+    filename = upload_filename_entry.get()
 
     client_process.stdin.write("upload\n")
 
@@ -14,17 +14,21 @@ def upload():
 
     client_process.stdin.flush()
 
+    reset_entries()
+
 
 
 def download():
 
-    filename = filename_entry.get()
+    filename = download_filename_entry.get()
 
     client_process.stdin.write("download\n")
 
     client_process.stdin.write(filename + "\n")
 
     client_process.stdin.flush()
+
+    reset_entries()
 
 
 
@@ -42,6 +46,8 @@ def rename():
 
     client_process.stdin.flush()
 
+    reset_entries()
+
 
 
 def exit_client():
@@ -51,6 +57,18 @@ def exit_client():
     client_process.stdin.flush()
 
     root.destroy()
+
+
+
+def reset_entries():
+
+    upload_filename_entry.delete(0, tk.END)
+
+    download_filename_entry.delete(0, tk.END)
+
+    old_filename_entry.delete(0, tk.END)
+
+    new_filename_entry.delete(0, tk.END)
 
 
 
@@ -76,15 +94,15 @@ upload_label.grid(row=0, column=0, padx=10, pady=5)
 
 
 
-filename_label = tk.Label(root, text="Filename:")
+upload_filename_label = tk.Label(root, text="File Path:")
 
-filename_label.grid(row=1, column=0, padx=10, pady=5)
+upload_filename_label.grid(row=1, column=0, padx=10, pady=5)
 
 
 
-filename_entry = tk.Entry(root)
+upload_filename_entry = tk.Entry(root)
 
-filename_entry.grid(row=1, column=1, padx=10, pady=5)
+upload_filename_entry.grid(row=1, column=1, padx=10, pady=5)
 
 
 
@@ -102,9 +120,21 @@ download_label.grid(row=3, column=0, padx=10, pady=5)
 
 
 
+download_filename_label = tk.Label(root, text="File Name:")
+
+download_filename_label.grid(row=4, column=0, padx=10, pady=5)
+
+
+
+download_filename_entry = tk.Entry(root)
+
+download_filename_entry.grid(row=4, column=1, padx=10, pady=5)
+
+
+
 download_button = tk.Button(root, text="Download", command=download)
 
-download_button.grid(row=4, column=0, columnspan=2, padx=10, pady=5)
+download_button.grid(row=5, column=0, columnspan=2, padx=10, pady=5)
 
 
 
@@ -112,37 +142,37 @@ download_button.grid(row=4, column=0, columnspan=2, padx=10, pady=5)
 
 rename_label = tk.Label(root, text="Rename")
 
-rename_label.grid(row=5, column=0, padx=10, pady=5)
+rename_label.grid(row=6, column=0, padx=10, pady=5)
 
 
 
 old_filename_label = tk.Label(root, text="Old Filename:")
 
-old_filename_label.grid(row=6, column=0, padx=10, pady=5)
+old_filename_label.grid(row=7, column=0, padx=10, pady=5)
 
 
 
 old_filename_entry = tk.Entry(root)
 
-old_filename_entry.grid(row=6, column=1, padx=10, pady=5)
+old_filename_entry.grid(row=7, column=1, padx=10, pady=5)
 
 
 
 new_filename_label = tk.Label(root, text="New Filename:")
 
-new_filename_label.grid(row=7, column=0, padx=10, pady=5)
+new_filename_label.grid(row=8, column=0, padx=10, pady=5)
 
 
 
 new_filename_entry = tk.Entry(root)
 
-new_filename_entry.grid(row=7, column=1, padx=10, pady=5)
+new_filename_entry.grid(row=8, column=1, padx=10, pady=5)
 
 
 
 rename_button = tk.Button(root, text="Rename", command=rename)
 
-rename_button.grid(row=8, column=0, columnspan=2, padx=10, pady=5)
+rename_button.grid(row=9, column=0, columnspan=2, padx=10, pady=5)
 
 
 
@@ -150,9 +180,8 @@ rename_button.grid(row=8, column=0, columnspan=2, padx=10, pady=5)
 
 exit_button = tk.Button(root, text="Exit", command=exit_client)
 
-exit_button.grid(row=9, column=0, columnspan=2, padx=10, pady=5)
+exit_button.grid(row=10, column=0, columnspan=2, padx=10, pady=5)
 
 
 
 root.mainloop()
-
