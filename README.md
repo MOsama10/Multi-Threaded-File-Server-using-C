@@ -50,6 +50,7 @@ Utilizes synchronization mechanisms such as mutexes, semaphores, or locks to pre
 - **Rename File:** Provides functionality to rename files stored on the server, enhancing organization and accessibility.
   
 - **Download File:** Enables clients to download files from the server, facilitating seamless retrieval of data.
+![Screenshot from 2024-05-15 21-56-48](https://github.com/MOsama10/Multi-Threaded-File-Server-using-C/assets/124840434/eb424364-b384-4359-bb66-66d2607d9193)
 
 **Conclusion:**
 
