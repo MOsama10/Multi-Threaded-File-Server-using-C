@@ -55,3 +55,6 @@ Utilizes synchronization mechanisms such as mutexes, semaphores, or locks to pre
 **Conclusion:**
 
 The implementation of a multi-threaded file server offers significant efficiency and scalability benefits over traditional single-threaded architectures. By incorporating recommended features, synchronization mechanisms, and essential file handling functions, this repository provides a robust solution capable of meeting the demands of modern applications.
+
+**GUI: using Tikenter**
+
